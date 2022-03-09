@@ -35,4 +35,4 @@ weekNumToWeekday = [
 'Saturday',
 ]
 
-console.log(`${month} ${day}, ${year} was a ${weekNumToWeekday[step7]}`);
+console.log(`${month} ${day}, ${year} was a ${weekNumToWeekday[step7]}.`);
