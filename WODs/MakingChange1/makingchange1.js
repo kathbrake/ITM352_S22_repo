@@ -17,4 +17,4 @@ var nickelsremaining = dimesremaining%5;
 //pennies
 var numofpennies = nickelsremaining;
 
-console.log(`We need ${numofquarters} quarters, ${numofdimes} dimes, ${numofnickels} and ${numofpennies} pennies to make $${dollarvalue}`)
+console.log(`We need ${numofquarters} quarters, ${numofdimes} dimes, ${numofnickels}nickels and ${numofpennies} pennies to make $${dollarvalue}`)
