@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="products-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Cameras</title>
+    <script src="./products_data.js"></script>
+
+</head>
+<body>
+    <h1>Kat's Vintage Camera Store!</h1>
+<p>
+    <div><main>
+<script>
+for (i = 0; i < products.length; i++) {
+        products+i != 'undefined'
+
+    document.write(`
+    <section class="item">
+        <h2>
+            ${products[0+i].brand}
+        </h2>
+        <p>
+            $${products[0+i].price}
+        </p>
+        <img src=${products[0+i].image}> 
+        </section>
+        `);
+    };
+    </script>
+</main></div>
+</p>
+<footer>
+    <h1>High quality & tested film cameras! </h1>
+</footer>
+</body>
+</html>
