@@ -1,7 +1,7 @@
 var product1  = {
     brand : "Minolta Weathermatic",
       price : 65.00 ,
-      image : "/Users/katherinebrake/ITM352_S22_repo/Brake_Katherine_Assignment1/Images/minolta.jpeg"
+      image : "/Users/katherinebrake/Documents/GitHub/ITM352_S22_repo 8.20.09 PM/Brake_Katherine_Assignment1/Image/discovery270.jpeg"
 };
 var product2 = {
     brand : "Olympus Zoom 170",
@@ -21,7 +21,7 @@ var product4 = {
 var product5 = {
     brand : "Canon AE-1 Program",
     price : 280.00 ,
-    image : "/Users/katherinebrake/ITM352_S22_repo/Brake_Katherine_Assignment1/Images/canon.jpeg"
+    image : ""
 };
 
 var products = [product1,product2,product3,product4,product5]
