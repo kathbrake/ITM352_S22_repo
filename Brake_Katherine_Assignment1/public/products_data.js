@@ -16,7 +16,7 @@ var product3 = {
 var product4 = {
     brand : "Fujifilm DL-270",
       price : 55.00 ,
-      image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/discovery270.jpeg?raw=true" 
+      image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/discoveryzoom.jpeg?raw=true" 
 };
 var product5 = {
     brand : "Canon AE-1 Program",
