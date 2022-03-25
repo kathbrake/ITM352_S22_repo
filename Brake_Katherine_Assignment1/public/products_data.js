@@ -2,6 +2,7 @@ var product1  = {
     brand : "Minolta Weathermatic",
       price : 65.00 ,
       image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/minolta.jpeg?raw=true"
+      
 };
 var product2 = {
     brand : "Olympus Zoom 170",
