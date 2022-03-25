@@ -1,9 +1,11 @@
 /* General UNFINISHEDDDDDDDD BACKGROUND IMG WONT LOAD */  
 body {
+        background-image: url(https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/backimg.jpeg?raw=true);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 920px;
         width:  800px; margin: 0 auto;
+        color: white;
 }
 img {
     width: 200px; height: 200px;
@@ -11,9 +13,11 @@ img {
 /* Typography */  
 h1 {
     text-align: center;
+    color: black;
 }
 h2 {
     text-align: center;
+    color: white;
 }
 /* Styling the products display */ 
 main {
