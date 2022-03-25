@@ -6,7 +6,7 @@ var product1  = {
 var product2 = {
     brand : "Olympus Zoom 170",
     price : 220.00 ,
-    image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/discovery.jpeg?raw=true" 
+    image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/olympus170.jpeg?raw=true" 
 };
 var product3 = {
     brand : "Yashica Fx-103",
@@ -16,7 +16,7 @@ var product3 = {
 var product4 = {
     brand : "Fujifilm DL-270",
       price : 55.00 ,
-      image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/discoveryzoom.jpeg?raw=true" 
+      image : "https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/discovery.jpeg?raw=true" 
 };
 var product5 = {
     brand : "Canon AE-1 Program",
