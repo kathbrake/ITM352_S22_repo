@@ -2,13 +2,12 @@ var products_array = require(__dirname + '/public/products_data.js');
 var express = require('express');
 var app = express();
 
-// Routing 
 
-// monitor all requests
 app.all('*', function (request, response, next) {
    console.log(request.method + ' to ' + request.path);
    next();
 });
+
 
 // process purchase request (validate quantities, check quantity available)
 function isNonNegInt(q, return_errors=false) {
@@ -21,10 +20,13 @@ function isNonNegInt(q, return_errors=false) {
 }
 
 
-// route all other GET requests to files in public 
 app.use(express.static(__dirname + '/public'));
+
 
 // starting server
 app.listen(8080, () => console.log(`listening on port 8080`));
 
 //family friend Anatol Blass helped me with this
+
+app.listen(8080, () => console.log(`listening on port 8080`));
+
