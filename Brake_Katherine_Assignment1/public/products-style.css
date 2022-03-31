@@ -1,25 +1,26 @@
-/* General UNFINISHEDDDDDDDD BACKGROUND IMG WONT LOAD */  
+/*sourced from my Smartphoneproducts3 lab */
+/*background and general styling*/  
 body {
-        background-image: url(https://github.com/kathbrake/ITM352_S22_repo/blob/main/Brake_Katherine_Assignment1/Image/backimg.jpeg?raw=true);
+        background-color: #87CEBF;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 920px;
         width:  800px; margin: 0 auto;
-        color: white;
+        color: black;
 }
 img {
     width: 200px; height: 200px;
 }
-/* Typography */  
+/* text style */  
 h1 {
     text-align: center;
     color: black;
 }
 h2 {
     text-align: center;
-    color: white;
+    color: black;
 }
-/* Styling the products display */ 
+/* products display style */ 
 main {
     display: flex;
     flex-flow: row wrap;

@@ -1,3 +1,4 @@
+/*sourced from my Smartphoneproducts3 lab and altered */
 var product1  = {
     brand : "Minolta Weathermatic",
       price : 65.00 ,

@@ -1,5 +1,4 @@
-var products_array = require(__dirname + '/products_data.js');
-
+var products_array = require(__dirname + '/public/products_data.js');
 var express = require('express');
 var app = express();
 
@@ -11,11 +10,21 @@ app.all('*', function (request, response, next) {
    next();
 });
 
-// process purchase request (validate quantities, check quantity available - ADD THIS LATERRRRRRRRRRRRRRR)
+// process purchase request (validate quantities, check quantity available)
+function isNonNegInt(q, return_errors=false) {
+   errors  = []; // no errors assumption
+   if (q == '') q=0; //
+   if (Number(q) != q) errors.push('<font color="red">Not a number!</font>'); // Check if string is a number value
+   if (q < 0) errors.push('<font color="red">Negative value!</font>'); // Check if it is non-negative
+   if (parseInt(q) != q) errors.push('<font color="red">Not an integer!</font>'); // Check that it is an integer
+   return return_errors ? errors : (errors.length == 0);
+}
 
 
 // route all other GET requests to files in public 
 app.use(express.static(__dirname + '/public'));
 
-// start server
+// starting server
 app.listen(8080, () => console.log(`listening on port 8080`));
+
+//family friend Anatol Blass helped me with this
