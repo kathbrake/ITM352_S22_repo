@@ -28,5 +28,5 @@ app.listen(8080, () => console.log(`listening on port 8080`));
 
 //family friend Anatol Blass helped me with this
 
-app.listen(8080, () => console.log(`listening on port 8080`));
+
 
