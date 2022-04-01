@@ -1,8 +1,8 @@
 <script src="./products_data.js"></script>
 <script>
-    // sourced from Smartphoneproducts3 lab
-    //family frined Anatol Blass helped me with this
-    //using a function to check the buyer's input
+    //  sourced from Smartphoneproducts3 lab
+    //  family frined Anatol Blass helped me with this
+    //  using a function to check the buyer's input
     function isNonNegInt(q, returnErrors=false) {
     errors = []; // assuming no errors at first
     if(q == ""){
@@ -28,27 +28,27 @@ window.onload = function () {
         let params = (new URL(document.location)).searchParams; 
     // retrieving the query string which contains form data
     if (params.has('checkout_submit')) {
-            has_errors = false; // assmes that quantities are valid
-            total_quantity = 0; // confirms selection was made - checks if the total is over 0
-            for (let i in products) {
-                if (params.has(`quantity${i}`)) {
-                    quantity = params.get(`quantity${i}`);
-                    product_selection_form[`quantity${i}`].value = quantity;
-                    total_quantity += quantity; 
-                    if(!isNonNegInt(quantity)) {
-                        has_errors = true; // invalid quantities
-                        checkQuantityTextbox(product_selection_form[`quantity${i}`]); // locates error
-                    }
-                }
+        has_errors = false; // assmes that quantities are valid
+        total_quantity = 0; // confirms selection was made - checks if the total is over 0
+    for (let i in products) {
+    if (params.has(`quantity${i}`)) {
+        quantity = params.get(`quantity${i}`);
+        product_selection_form[`quantity${i}`].value = quantity;
+        total_quantity += quantity; 
+    if(!isNonNegInt(quantity)) {
+        has_errors = true; // invalid quantities
+        checkQuantityTextbox(product_selection_form[`quantity${i}`]); // locates error
             }
-            // responds to errors or redirects to the invoice if everything is valid
-            if(has_errors) {
-                alert("Enter valid quantities");
-            } else if(total_quantity == 0) { 
-                alert("Select quantities");
-            } else { 
-                window.location = `./invoice.html${document.location.search}`;
-                window.stop;
+        }
+     }
+    // responds to errors or redirects to the invoice if everything is valid
+    if(has_errors) {
+        alert("Enter valid quantities");
+    } else if(total_quantity == 0) { 
+        alert("Select quantities");
+    } else { 
+        window.location = `./invoice.html${document.location.search}`;
+        window.stop;
             }
         }
     }
@@ -56,7 +56,6 @@ window.onload = function () {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>  Kat's Vintage Camera Store</title>
@@ -64,26 +63,23 @@ window.onload = function () {
 </head>
 <body>
     <header>
-        <h1><a href="./index.html"> </a> Kat's Vintage Camera Store </h1>
+    <h1><a href="./index.html"> </a> Kat's Vintage Camera Store </h1>
     </header>
-        
-        <form action="" name="product_selection_form" method="GET">
+    <form action="" name="product_selection_form" method="GET">
    <div> 
       <main>
-            <script>
-            
-                for(let i in products){
-                document.write(`
-            <section class="item">
-                <h2>${products[i].brand}</h2>
-                <p>$${products[i].price}</p>
-                <img src="${products[i].image}">
-                <label id="quantity${i}_label"}">Quantity</label>
-                <input type="text" placeholder="0" name="quantity${i}" onkeyup="checkQuantityTextbox(this);" >
-            </section>`);
-                
-        }
-            </script>
+        <script>
+        for(let i in products){
+        document.write(`
+        <section class="item">
+        <h2>${products[i].brand}</h2>
+        <p>$${products[i].price}</p>
+        <img src="${products[i].image}">
+        <label id="quantity${i}_label"}">Quantity</label>
+        <input type="text" placeholder="0" name="quantity${i}" onkeyup="checkQuantityTextbox(this);" >
+        </section>`);
+                }
+        </script>
         </main>
        
     </div>

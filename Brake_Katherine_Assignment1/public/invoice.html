@@ -1,7 +1,7 @@
 <script src="./products_data.js"></script>
 <link href="products-style.css" re;="stylesheet">
 <script>
-    //sourced from my invoice3 lab
+    // invoice3 lab
     let params = (new URL(document.location)).searchParams;
     var quantity = [];
 </script>
@@ -26,7 +26,7 @@
     <tr>
 
     <script>
-    //Using a loop for our shop's items
+    //loop for products
     subtotal = 0;
     for(i in products){
     quantity = params.get(`quantity${i}`);
@@ -45,8 +45,8 @@
 
     </script>
     <script>
-        //my smartphonepproducts3 lab and altered
-        //Generating subtotal
+        // smartphonepproducts3 lab and altered
+        // generating subtotal
         var tax_rate = 0.0575;
         var tax = tax_rate*subtotal
 
@@ -58,7 +58,7 @@
     var total = subtotal + tax + shipping;
     </script>
     
-    <script>//Using Document.write to calculate our subtotal, tax (using the tax rate), shipping and final total)
+    <script>// uses document.write to calculate our subtotal, tax (using the tax rate), shipping and final total)
     document.write(`
         <td colspan="4" width="100%">&nbsp;</td>
         </tr>
