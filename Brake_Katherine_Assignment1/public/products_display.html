@@ -29,7 +29,7 @@ window.onload = function () {
     // retrieving the query string which contains form data
     if (params.has('checkout_submit')) {
             has_errors = false; // assmes that quantities are valid
-            total_quantity = 0; // need to check if something was selected so we will look if the total > 0
+            total_quantity = 0; // confirms selection was made - checks if the total is over 0
             for (let i in products) {
                 if (params.has(`quantity${i}`)) {
                     quantity = params.get(`quantity${i}`);
@@ -37,16 +37,16 @@ window.onload = function () {
                     total_quantity += quantity; 
                     if(!isNonNegInt(quantity)) {
                         has_errors = true; // invalid quantities
-                        checkQuantityTextbox(product_selection_form[`quantity${i}`]); // address of error
+                        checkQuantityTextbox(product_selection_form[`quantity${i}`]); // locates error
                     }
                 }
             }
-            // responds to errors or redirect to invoice if all is ok
+            // responds to errors or redirects to the invoice if everything is valid
             if(has_errors) {
                 alert("Enter valid quantities");
-            } else if(total_quantity == 0) { // no quantity selections, just give a general alert
+            } else if(total_quantity == 0) { 
                 alert("Select quantities");
-            } else { // all good to go!
+            } else { 
                 window.location = `./invoice.html${document.location.search}`;
                 window.stop;
             }
