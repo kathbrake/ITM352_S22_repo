@@ -26,28 +26,26 @@ function checkQuantityTextbox(theTextbox) {
 //generating a pop up window if input is invalid
 window.onload = function () {
         let params = (new URL(document.location)).searchParams; 
-        // get the query string which has the form data
-        // form was submitted so check that quantities are valid then redirect to invoice if ok.
-        if (params.has('checkout_submit')) {
-            has_errors = false; // assume quantities are valid from the start
+    // retrieving the query string which contains form data
+    if (params.has('checkout_submit')) {
+            has_errors = false; // assmes that quantities are valid
             total_quantity = 0; // need to check if something was selected so we will look if the total > 0
             for (let i in products) {
                 if (params.has(`quantity${i}`)) {
                     quantity = params.get(`quantity${i}`);
-                    // make textboxes sticky in case of invalid data
                     product_selection_form[`quantity${i}`].value = quantity;
                     total_quantity += quantity; 
                     if(!isNonNegInt(quantity)) {
-                        has_errors = true; // oops, invalid quantity
-                        checkQuantityTextbox(product_selection_form[`quantity${i}`]); // show where the error is
+                        has_errors = true; // invalid quantities
+                        checkQuantityTextbox(product_selection_form[`quantity${i}`]); // address of error
                     }
                 }
             }
-            // Now respond to errors or redirect to invoice if all is ok
+            // responds to errors or redirect to invoice if all is ok
             if(has_errors) {
-                alert("Please enter only valid quantities!");
+                alert("Enter valid quantities");
             } else if(total_quantity == 0) { // no quantity selections, just give a general alert
-                alert("Please select some quantities!");
+                alert("Select quantities");
             } else { // all good to go!
                 window.location = `./invoice.html${document.location.search}`;
                 window.stop;
@@ -73,7 +71,7 @@ window.onload = function () {
    <div> 
       <main>
             <script>
-                //Generate a recipt from a for loop
+            
                 for(let i in products){
                 document.write(`
             <section class="item">
