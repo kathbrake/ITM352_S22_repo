@@ -13,7 +13,7 @@ function isNonNegInt(q, return_errors=false) {
    if (q == '') q=0;
    if (Number(q) != q) errors.push('<font color="red">Not a number!</font>'); // checks if string is number value
    if (q < 0) errors.push('<font color="red">Negative value!</font>'); // checks if it is non-negative
-   if (parseInt(q) != q) errors.push('<font color="red">Not an integer!</font>'); // checks if it is an integer
+   if (parseInt(q) != q) errors.push('<font color="red">Not an integer!</font>'); //checks if it is an integer
    return return_errors ? errors : (errors.length == 0);
 }
 
