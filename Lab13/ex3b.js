@@ -41,7 +41,7 @@ app.post("/login", function (request, response) {
 if(typeof users[request.body.username] !='undefined') {
 // username exists, get the stored password and see iff it matches password entered
 if (users[request.body.username].password == request.body.password)  {
-response.send (`${users[request.body.username]} is logged in`);
+response.send (`${request.body.username} is logged in`);
 return;
 } else {
 response.send(`Password doesn't match saved password<br>${str}`);
@@ -50,6 +50,41 @@ response.send(`Password doesn't match saved password<br>${str}`);
     response.send(`${request.body.username} doesn't exist<br>${str}`);
 }
 });
+
+app.get("/register", function (request, response) {
+    // Give a simple register form
+    str = `
+<body>
+<form action="" method="POST">
+<input type="text" name="username" size="40" placeholder="enter username" ><br />
+<input type="password" name="password" size="40" placeholder="enter password"><br />
+<input type="password" name="repeat_password" size="40" placeholder="enter password again"><br />
+<input type="email" name="email" size="40" placeholder="enter email"><br />
+<input type="submit" value="Submit" id="submit">
+</form>
+</body>
+    `;
+    response.send(str);
+ });
+
+ app.post("/register", function (request, response) {
+    //process a simple register form
+    //validate the registration data
+    //save the data if validated
+    //inputting the new registration
+    console.log(request.body);
+    let username = request.body.username;
+    users[username] = {};
+    users[username].password = request.body.password;
+    users[username].email = request.body.email;
+
+
+    fs.writeFileSync(filename, JSON.stringify(users));
+    //display username registered
+    respond.send(`${username} registered!`)
+
+ });
+
 
 app.listen(8080, () => console.log(`listening on port 8080`));
 
